@@ -1,0 +1,17 @@
+[Unit]
+Description=BuisnessPig backend (python stdlib)
+After=network.target
+
+[Service]
+Type=simple
+# Укажи СВОЙ путь до папки с server.py
+WorkingDirectory=/home/ubuntu/buisnesspig
+ExecStart=/usr/bin/python3 server.py
+Restart=always
+RestartSec=3
+# Пиши логи в файл, чтобы можно было смотреть:
+StandardOutput=append:/var/log/pigserver.log
+StandardError=append:/var/log/pigserver.log
+
+[Install]
+WantedBy=multi-user.target

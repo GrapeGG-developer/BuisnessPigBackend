@@ -1,0 +1,6 @@
+# Caddyfile — бесплатный HTTPS (Let's Encrypt) в один файл.
+# Замени example.duckdns.org на свой бесплатный домен (например, с duckdns.org).
+
+example.duckdns.org {
+    reverse_proxy 127.0.0.1:8000
+}
